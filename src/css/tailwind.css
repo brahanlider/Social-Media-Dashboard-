@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .switcher-dark {
+    @apply w-16 h-8 flex items-center flex-row-reverse p-2 rounded-full cursor-pointer bg-[hsl(230,22%,74%)]
+    peer-checked:bg-gradient-to-r from-gradient-switch-first to-gradient-switch-second       peer-checked:[--bg-circle:hsl(228,28%,20%)]
+    peer-checked:[--transform-circle:-100%];
+  }
+
+  .card-stats {
+    @apply grid grid-cols-[min-content_max-content] grid-rows-[max-content_max-content] justify-between items-center gap-y-12 content-center;
+  }
+}
+
+/* @media(prefers-color-sheme: dark){
+  
+} */
